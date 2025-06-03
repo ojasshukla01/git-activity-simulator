@@ -84,6 +84,22 @@ pytest tests/
 
 ---
 
+🔄 How to Undo Changes
+
+If you want to undo fake commits in your local repo:
+
+python -m gh_activity_boost.cleanup --repo /path/to/your/repo
+
+This will remove the last 100 commits. Adjust as needed!
+
+For issues, PRs, or stars created via real API:
+- Un-star repos manually on GitHub.
+- Close fake issues or PRs directly in the GitHub UI.
+
+❌ There is no way to fully “reset” your GitHub contribution graph to its exact historical state.
+
+---
+
 ⚠️ Disclaimer
 
 This tool is for educational and demonstration purposes only.  
