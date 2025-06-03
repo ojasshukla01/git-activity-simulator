@@ -1,0 +1,20 @@
+name: Auto Activity
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Daily
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Simulate daily activity
+        run: |
+          echo "Fake activity on $(date)" >> DAILY_ACTIVITY.md
+          git config user.name "Your Name"
+          git config user.email "you@example.com"
+          git add .
+          git commit -m "Auto activity on $(date)"
+          git push
