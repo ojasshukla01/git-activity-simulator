@@ -1,37 +1,32 @@
 🟩 git-activity-simulator
 
-Supercharge your GitHub contribution graph with a single command-line tool!  
-Generate fake commit histories, mock PRs, issues, and stars – perfect for testing, demos, and learning Git workflows.
+Supercharge your GitHub profile with automated activity for testing, demos, and fun!  
+This CLI tool generates fake commit histories and simulates PRs, issues, and stars to help you visualize a more active contribution graph – all in a safe, controlled way.
 
 ---
 
 🚀 Features
 
-✅ Generate fake commit history across any date range  
-✅ Simulate PRs, issues, and starring repositories (API-ready)  
-✅ Dry-run mode for safe previews before executing  
-✅ Fully automated CLI – no manual steps needed  
+✅ Generate fake commits across any date range  
+✅ Simulate pull requests, issues, and starring repositories (API-ready)  
+✅ Dry-run mode to preview actions without changing anything  
+✅ Fully automated CLI – no manual Git commands needed  
 ✅ Modular, well-documented, and cross-platform  
 
 ---
 
 ⚙️ Installation
 
-1️⃣ Clone the repository:
-git clone https://github.com/ojasshukla01/git-activity-simulator.git
-cd git-activity-simulator
-
-2️⃣ Create a virtual environment and install dependencies:
-python -m venv venv
-source venv/bin/activate  # macOS/Linux
-# Windows: venv\Scripts\activate
-pip install -r requirements.txt
+git clone https://github.com/ojasshukla01/git-activity-simulator.git  
+cd git-activity-simulator  
+python -m venv venv  
+source venv/bin/activate  # macOS/Linux  
+# Windows: venv\Scripts\activate  
+pip install -r requirements.txt  
 
 ---
 
 📦 Usage
-
-Run the CLI tool to generate fake Git activity:
 
 python -m gh_activity_boost.cli \
   --repo /path/to/your/repo \
@@ -45,65 +40,77 @@ python -m gh_activity_boost.cli \
 
 Arguments:
 
---repo             Path to your local Git repository  
+--repo             Local Git repo path  
 --start            Start date (YYYY-MM-DD)  
 --end              End date (YYYY-MM-DD)  
 --commits-per-day  Number of commits per day (default: 1)  
 --pr-count         Number of PRs to simulate (default: 0)  
 --issues-count     Number of issues to simulate (default: 0)  
 --stars-count      Number of repositories to star (default: 0)  
---dry-run          Preview actions without executing  
+--dry-run          Preview actions only  
 
 ---
 
-🎯 Customization
+🏆 Achievements You Can Earn
 
-- Change date ranges, commit counts, PRs, issues, and stars to fit your demo or learning goals.
-- Use --dry-run first to preview everything safely.
-- You can extend modules to make real API calls for live GitHub activity (e.g., PRs and stars).
+By running this tool (especially with real GitHub API calls), you might see:
 
----
-
-💡 Possible Achievements & Effects
-
-Achievement          How?  
--------------------- ---------------------------------------------  
-🟩 Green Squares     Fake commit history fills your contribution graph  
-🏁 YOLO / PR Shark   Mock PRs help simulate real activity (in real usage)  
-🚀 Active Profile    Stars, issues, and commits create an active profile look  
+🟩 Green Squares          – Fill your GitHub contribution graph with fake commit activity  
+🏁 Pull Shark             – Create PRs (even fake ones!) in real repos  
+🏆 YOLO                   – Merge your own PRs without review (in private repos)  
+⭐ Starstruck             – Star other repositories  
+💬 Galaxy Brain           – Create issues or comments (future module!)  
+📦 Arctic Code Vault      – Not achievable – historical snapshot only  
 
 ---
 
-🧪 Running Tests
+🎨 GitHub Badges
 
-We use pytest to ensure everything works as expected:
+Running this repo can indirectly boost your GitHub profile appearance.  
+Add these dynamic badges to your README.md to show off your activity:
+
+Commits: https://img.shields.io/badge/commits-daily-brightgreen  
+Issues: https://img.shields.io/badge/issues-active-blue  
+Pull Requests: https://img.shields.io/badge/PRs-daily-purple  
+Stars: https://img.shields.io/badge/stars-daily-yellow  
+
+---
+
+🧪 Tests
+
+Use pytest to validate core logic:
 
 pytest tests/
 
 ---
 
-🪄 Extend & Contribute
+🔄 How to Undo Changes
 
-This project is modular and easy to extend:
-- Add random commit messages.
-- Visualize your contribution stats with shields.io.
-- Build real API integrations for PRs and stars.
+If you want to undo fake commits in your local repo:
 
-Pull requests welcome! 🚀
+python -m gh_activity_boost.cleanup --repo /path/to/your/repo
+
+This will remove the last 100 commits. Adjust as needed!
+
+For issues, PRs, or stars created via real API:
+- Un-star repos manually on GitHub.
+- Close fake issues or PRs directly in the GitHub UI.
+
+❌ There is no way to fully “reset” your GitHub contribution graph to its exact historical state.
 
 ---
 
 ⚠️ Disclaimer
 
-This tool is for educational, demo, and fun purposes only.  
-Do not use it to misrepresent your contributions or deceive others.
+This tool is for educational and demonstration purposes only.  
+Please don’t use it to misrepresent your actual contributions or deceive others.
 
 ---
 
 📄 License
 
-MIT License. See LICENSE for full details.
+MIT License. See LICENSE for details.
 
 ---
 
-Happy hacking! 🌟
+Happy hacking, and enjoy the green squares! 🌟
